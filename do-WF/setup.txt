@@ -1,0 +1,48 @@
+SETUP ROOT WEBFLOW
+
+# Head Code
+
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+
+
+#Footer Code
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js" integrity="sha512-Q+G390ZU2qKo+e4q+kVcJknwfGjKJOdyu5mVMcR95NqL6XaF4lY4nsSvIVB3NDP54ACsS9rqhE1DVqgpApl//Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" src="https://uploads-ssl.webflow.com/611e2246394dac03477454a5/612b7fe8b03ced6c60f9f970_draw.js.txt"></script>
+
+<script>
+
+
+var Webflow = Webflow || [];
+Webflow.push(function () {
+
+    window.togglesKey = {};
+	window.doautotheme = null;
+
+
+
+    $('[data-module]').each((i, el) => {
+        console.log('#module', el.dataset.module);
+
+        if (el.dataset.module == 'dotheme') {
+          if (window.dothemes == null) {
+            window.dothemes = [];
+          }
+          window.dothemes.push(
+            window.WFmodules[el.dataset.module].call(el)
+          );
+        } else {
+          window.WFmodules[el.dataset.module].call(el);
+        }
+    });
+
+
+});
+
+</script>

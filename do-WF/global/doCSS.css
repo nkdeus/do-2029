@@ -1,0 +1,357 @@
+/*<style>*/
+/* Base framework for WF */
+
+/* COLORS */
+:root {
+  --main: #222;
+  --second: #666;
+  --contraste: #fff;
+  --extra: #00A0E2;
+   
+  --main-color: var(--main);
+  --second-color: var(--second);
+  --contraste-color: var(--contraste);
+  --extra-color: var(--extra);
+  
+}
+/* UI CONTROLLER */
+
+:root {
+  --do: 0.9;
+  --do-max: 10;
+  
+  --do-small: 0.61;
+  --do-big: 1.61;
+  
+  --xxs: 0.5rem;
+    --xxs-vw: 0.7vw;
+      --xxs-max: 1rem;
+  
+  --xs: 0.75rem;
+    --xs-vw: 0.9vw;
+      --xs-max: 1.25rem;
+   
+  --sm: 1rem;
+    --sm-vw: 0.95vw;
+      --sm-max: 1.1rem;
+  
+  --md: 1.25rem;
+    --md-vw: 1.5vw;
+      --md-max: 1.75rem;
+  
+  --lg: 1.5rem;
+    --lg-vw: 2vw;
+      --lg-max: 2rem;
+  
+  --xl: 1.8rem;
+    --xl-vw: 2.5vw;
+      --xl-max: 3rem;
+  
+  --xxl: 2.5rem;
+    --xxl-vw: 3vw;
+      --xxl-max: 4rem;
+      
+  --xxxl: 10rem;
+    --xxxl-vw: 10vw;
+      --xxxl-max: 20rem;
+    
+}
+
+@media screen and (max-width: 991px) {
+
+  :root {
+      --do: 1;
+      --do-max: 10;
+
+      --do-small: 0.61;
+      --do-big: 1.61;
+
+      --xxs: 0.5rem;
+        --xxs-vw: 0.7vw;
+          --xxs-max: 1rem;
+
+      --xs: 0.75rem;
+        --xs-vw: 0.9vw;
+          --xs-max: 1.25rem;
+
+      --sm: 1rem;
+        --sm-vw: 0.95vw;
+          --sm-max: 1.1rem;
+
+      --md: 1.25rem;
+        --md-vw: 1.5vw;
+          --md-max: 1.75rem;
+
+      --lg: 1.5rem;
+        --lg-vw: 2vw;
+          --lg-max: 2rem;
+
+      --xl: 1.8rem;
+        --xl-vw: 2.5vw;
+          --xl-max: 3rem;
+
+      --xxl: 2.5rem;
+        --xxl-vw: 3vw;
+          --xxl-max: 4rem;
+
+      --xxxl: 1rem;
+        --xxxl-vw: 1vw;
+          --xxxl-max: 20rem;
+
+    }
+
+}
+/* SIZER */
+
+[data-set-do='small']{
+		--do:var(--do-small);
+}
+[data-set-do='big']{
+		--do:var(--do-big);
+}
+
+/* HARD RESET */
+h1,h2,h3,h4,h5,h6{
+	margin:0px;
+  padding:0px;
+  line-height:1.2;
+  margin-bottom:0.61em;
+}
+
+/* BOODY */
+body{
+	--navHeight : 0;
+}
+
+/* CRAZY TYPO */
+html{
+	font-size:clamp(calc( var(--do) * var(--xs) ), calc( var(--do) * var(--sm-vw) ), calc( var(--do) * var(--sm-max) ));
+}
+h1{
+	font-size:clamp(calc( var(--do) * var(--xxl) ), calc( var(--do) * var(--xxl-vw) ), calc( var(--do) * var(--xxl-max) ));
+}
+h2{
+font-size:clamp(calc( var(--do) * var(--xl) ), calc( var(--do) * var(--xl-vw) ), calc( var(--do) * var(--xl-max) ));
+}
+h3{
+font-size:clamp(calc( var(--do) * var(--lg) ), calc( var(--do) * var(--lg-vw) ), calc( var(--do) * var(--lg-max) ));
+}
+h4{
+font-size:clamp(calc( var(--do) * var(--md) ), calc( var(--do) * var(--md-vw) ), calc( var(--do) * var(--md-max) ));
+}
+h5{
+font-size:clamp(calc( var(--do) * var(--sm) ), calc( var(--do) * var(--sm-vw) ), calc( var(--do) * var(--sm-max) ));
+}
+h6{
+font-size:clamp(calc( var(--do) * var(--xs) ), calc( var(--do) * var(--xs-vw) ), calc( var(--do) * var(--xs-max) ));
+}
+
+/* LE MONSTRE RAPIDE */
+[class*='do-mw-'],[data-do-mw]{
+   width:100%;
+	 max-width:clamp(calc( var(--do-max) * var(--do-mw-scope) ), calc( var(--do-max) * var(--do-mw-scope-vw) ), calc( var(--do-max) * var(--do-mw-scope-max) )) !important;
+}
+[class*='do-my-'],[data-do-my]{
+   margin-bottom:clamp(calc( var(--do) * var(--do-my-scope) ), calc( var(--do) * var(--do-my-scope-vw) ), calc( var(--do) * var(--do-my-scope-max) )) !important;
+	 margin-top:clamp(calc( var(--do) * var(--do-my-scope) ), calc( var(--do) * var(--do-my-scope-vw) ), calc( var(--do) * var(--do-my-scope-max) )) !important;
+}
+[class*='do-mb-'],[data-do-mb]{
+   margin-bottom:clamp(calc( var(--do) * var(--do-mb-scope) ), calc( var(--do) * var(--do-mb-scope-vw) ), calc( var(--do) * var(--do-mb-scope-max) )) !important;
+}
+[class*='do-p-'],[data-do-p]{
+	padding:clamp(calc( var(--do) * var(--do-p-scope) ), calc( var(--do) * var(--do-p-scope-vw) ), calc( var(--do) * var(--do-p-scope-max) )) !important;
+	}
+[class*='do-px-'],[data-do-px]{
+	padding-left:clamp(calc( var(--do) * var(--do-px-scope) ), calc( var(--do) * var(--do-px-scope-vw) ), calc( var(--do) * var(--do-px-scope-max) )) !important;
+	padding-right:clamp(calc( var(--do) * var(--do-px-scope) ), calc( var(--do) * var(--do-px-scope-vw) ), calc( var(--do) * var(--do-px-scope-max) )) !important;
+}
+[class*='do-py-'],[data-do-py]{
+	padding-top:clamp(calc( var(--do) * var(--do-py-scope) ), calc( var(--do) * var(--do-py-scope-vw) ), calc( var(--do) * var(--do-py-scope-max) )) !important;
+	padding-bottom:clamp(calc( var(--do) * var(--do-py-scope) ), calc( var(--do) * var(--do-py-scope-vw) ), calc( var(--do) * var(--do-py-scope-max) )) !important;
+}
+[class*='do-pb-'],[data-do-pb]{
+	padding-bottom:clamp(calc( var(--do) * var(--do-py-scope) ), calc( var(--do) * var(--do-py-scope-vw) ), calc( var(--do) * var(--do-py-scope-max) )) !important;
+}
+[class*='do-pr-'],[data-do-pr]{
+	padding-right:clamp(calc( var(--do) * var(--do-pr-scope) ), calc( var(--do) * var(--do-pr-scope-vw) ), calc( var(--do) * var(--do-pr-scope-max) )) !important;
+}
+[class*='do-pl-'],[data-do-pl]{
+	padding-left:clamp(calc( var(--do) * var(--do-pl-scope) ), calc( var(--do) * var(--do-pl-scope-vw) ), calc( var(--do) * var(--do-pl-scope-max) )) !important;
+}
+[class*='do-ml-'],[data-do-ml]{
+	margin-left:clamp(calc( var(--do) * var(--do-ml-scope) ), calc( var(--do) * var(--do-ml-scope-vw) ), calc( var(--do) * var(--do-ml-scope-max) )) !important;
+}
+[class*='do-gap-'],[data-do-gap]{
+	grid-gap:clamp(calc( var(--do) * var(--do-gap-scope) ), calc( var(--do) * var(--do-gap-scope-vw) ), calc( var(--do) * var(--do-gap-scope-max) )) !important; 
+}
+/* DO FONT SIZE */
+[data-do-fs='xxxl']{
+	font-size:clamp(calc( var(--do) * var(--xxxl) ), calc( var(--do) * var(--xxxl-vw) ), calc( var(--do) * var(--xxxl-max) )) !important;
+}
+[data-do-fs='xxl']{
+	font-size:clamp(calc( var(--do) * var(--xxl) ), calc( var(--do) * var(--xxl-vw) ), calc( var(--do) * var(--xxl-max) )) !important;
+}
+[data-do-fs='xl']{
+	font-size:clamp(calc( var(--do) * var(--xl) ), calc( var(--do) * var(--xl-vw) ), calc( var(--do) * var(--xl-max) )) !important;
+}
+[data-do-fs='lg']{
+	font-size:clamp(calc( var(--do) * var(--lg) ), calc( var(--do) * var(--lg-vw) ), calc( var(--do) * var(--lg-max) )) !important;
+}
+[data-do-fs='md']{
+	font-size:clamp(calc( var(--do) * var(--md) ), calc( var(--do) * var(--md-vw) ), calc( var(--do) * var(--md-max) )) !important;
+}
+[data-do-fs='sm']{
+	font-size:clamp(calc( var(--do) * var(--sm) ), calc( var(--do) * var(--sm-vw) ), calc( var(--do) * var(--sm-max) )) !important;
+}
+[data-do-fs='xs']{
+	font-size:clamp(calc( var(--do) * var(--xs) ), calc( var(--do) * var(--xs-vw) ), calc( var(--do) * var(--xs-max) )) !important;
+}
+[data-do-fs='xxs']{
+	font-size:clamp(calc( var(--do) * var(--xxs) ), calc( var(--do) * var(--xxs-vw) ), calc( var(--do) * var(--xxs-max) )) !important;
+}
+/* DO COLORS */
+/* __ MAIN */
+[data-do-bg='main'] {
+  background-color: var(--main-color) !important;
+}
+[data-do-txt='main'] {
+  color: var(--main-color) !important;
+}
+[data-set-main='second'] {
+  --main-color: var(--second) !important;
+}
+[data-set-main='contraste'] {
+  --main-color: var(--contraste) !important;
+}
+[data-set-main='extra'] {
+  --main-color: var(--extra) !important;
+}
+/* __ SECOND */
+[data-do-bg='second'] {
+  background-color: var(--second-color) !important;
+}
+[data-do-txt='second'] {
+  color: var(--second-color) !important;
+}
+[data-set-second='main'] {
+  --second-color: var(--main) !important;
+}
+[data-set-second='contraste'] {
+  --second-color: var(--contraste) !important;
+}
+[data-set-second='extra'] {
+  --second-color: var(--extra) !important;
+}
+/* __ CONTRASTE */
+[data-do-bg='contraste'] {
+  background-color: var(--contraste-color) !important;
+}
+[data-do-txt='contraste'] {
+  color: var(--contraste-color) !important;
+}
+[data-set-contraste='main'] {
+  --contraste-color: var(--main) !important;
+}
+[data-set-contraste='second'] {
+  --contraste-color: var(--second) !important;
+}
+[data-set-contraste='extra'] {
+  --contraste-color: var(--extra) !important;
+}
+/* __ EXTRA */
+[data-do-bg='extra'] {
+  background-color: var(--extra-color) !important;
+}
+[data-do-txt='extra'] {
+  color: var(--extra-color) !important;
+}
+[data-set-extra='main'] {
+  --extra-color: var(--main) !important;
+}
+[data-set-extra='second'] {
+  --extra-color: var(--second) !important;
+}
+[data-set-extra='contraste'] {
+  --extra-color: var(--contraste) !important;
+}
+
+/* EXTEND DO */
+.do-fill-main-color g{
+	fill:var(--main-color);
+}
+
+/* DO DESIGN GUIDE */
+/* PADDINGS */
+.do-px-xxxl,[data-do-px='xxxl']{
+  --do-px-scope: var(--xxxl);
+  --do-px-scope-vw: var(--xxxl-vw);
+  --do-px-scope-max: var(--xxxl-max);
+}
+
+.do-py-xxxl,[data-do-py='xxxl']{
+  --do-py-scope: var(--xxxl);
+  --do-py-scope-vw: var(--xxxl-vw);
+  --do-py-scope-max: var(--xxxl-max);
+}
+.do-pr-xxxl,[data-do-pr='xxxl']{
+  --do-pr-scope: var(--xs);
+  --do-pr-scope-vw: var(--xxxl-vw);
+  --do-pr-scope-max: var(--xxxl-max);
+}
+.do-pl-xxxl,[data-do-pl='xxxl']{
+  --do-pl-scope: var(--xxxl);
+  --do-pl-scope-vw: var(--xxxl-vw);
+  --do-pl-scope-max: var(--xxxl-max);
+}
+
+.do-px-xl,[data-do-px='xl']{
+  --do-px-scope: var(--xs);
+  --do-px-scope-vw: var(--xl-vw);
+  --do-px-scope-max: var(--xl-max);
+}
+.do-pr-xl,[data-do-pr='xl']{
+  --do-pr-scope: var(--xl);
+  --do-pr-scope-vw: var(--xl-vw);
+  --do-pr-scope-max: var(--xl-max);
+}
+.do-pl-xl,[data-do-pl='xl']{
+  --do-pl-scope: var(--xl);
+  --do-pl-scope-vw: var(--xl-vw);
+  --do-pl-scope-max: var(--xl-max);
+}
+
+.do-p-xl,[data-do-p='xl']{
+  --do-p-scope: var(--xl);
+  --do-p-scope-vw: var(--xl-vw);
+  --do-p-scope-max: var(--xl-max);
+}
+
+/* MARGINS */
+.do-my-xxxl,[data-do-my='xxxl']{
+	--do-my-scope: var(--xxxl);
+  --do-my-scope-vw: var(--xxxl-vw);
+  --do-my-scope-max: var(--xxxl-max);
+}
+
+/* MAX WIDTH */
+.do-mw-xxxl,[data-do-mw='xxxl']{
+	--do-mw-scope: var(--xxxl);
+  --do-mw-scope-vw: var(--xxxl-vw);
+  --do-mw-scope-max: var(--xxxl-max);
+}
+.do-mw-xxl,[data-do-mw='xxl']{
+	--do-mw-scope: var(--xxl);
+  --do-mw-scope-vw: var(--xxl-vw);
+  --do-mw-scope-max: var(--xxl-max);
+}
+
+/* FLEX AND GRID GAP */
+.do-gap-xl,[data-do-gap='xl']{
+	--do-gap-scope: var(--xl);
+  --do-gap-scope-vw: var(--xl-vw);
+  --do-gap-scope-max: var(--xl-max);
+}
+
+
+
+/*</style>*/

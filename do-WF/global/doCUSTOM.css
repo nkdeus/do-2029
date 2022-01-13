@@ -1,0 +1,258 @@
+/*<style>*/
+/* Custom CSS for WF */
+
+/* LAZY WF */
+.child-p > *{
+	padding:1rem;
+}
+.child-m > *{
+	margin:1rem;
+}
+
+/* FAST RESET */
+
+.do-m-0{
+	margin:0;
+}
+.do-p-0{
+	padding:0 !important;
+}
+
+
+@media screen and (max-width: 767px) {
+  .mobile-do-p-0{
+    padding:0 !important;
+  }
+}
+/* GOOD POSITIONS */
+
+.do-mx-auto{
+	margin-left:auto;
+  margin-right:auto;
+}
+
+.no-events{
+	pointer-events:none;
+}
+
+/* NAV LINK BEFORE */
+.nav-link .bt-txt:before{
+  content:" ";
+  transition:all 0.25s ease-out;
+  width:calc(100% - 0rem);
+  position:absolute;
+  left:0rem;
+  bottom:-0.5rem;
+  background-color:var(--main-color);
+  height:1px;
+  opacity:0;
+  transform:scaleX(0);
+}
+
+.nav-link:hover .bt-txt:before{
+  opacity:0.5;
+  transform:scaleX(1);
+}
+
+.nav-link.w--current .bt-txt:before{
+  opacity:1;
+  height:2px;
+  transform:scaleX(1);
+}
+
+/* MOBILE NAV */
+
+.w-icon-nav-menu{
+	
+  color:var(--main-color)
+
+}
+
+.w-nav-button.w--open{
+		
+
+    background-color:transparent;
+
+}
+.w-nav-button.w--open .w-icon-nav-menu:before{
+		
+    content: "\e601";
+
+}
+.w-nav-overlay{
+	 overflow:visible;
+}
+.nav-container{
+	z-index:10;
+  position: relative;
+}
+@media screen and (max-width: 991px) {
+
+  .nav-menu:before{
+
+    content:"";
+    position:absolute;
+    top:-8rem;
+    z-index:0;
+    left:0px;
+    width:100%;
+    height:calc(100% + 8rem);
+    background-color:var(--main-color);
+    filter: invert(100%);
+
+  }
+  
+}
+/* TIP TOP HEIGHT */
+.nav-top-var{
+	top: calc( var(--navHeight) * 1px ) !important;
+}
+
+/* MIX BLEND MODE, not too much :D */
+.mix-screen{
+	mix-blend-mode: screen;
+}
+
+/* SLICK, slider WF looks like 1999 style UX */
+.slick-disabled{
+  opacity:0;
+}
+.click-arrow{
+  cursor:pointer;
+  transition:opacity 0.3s;
+}
+.slick-track{
+	height:100%;
+  margin:0px !important;
+}
+.slick-list{
+	height:100%;
+  overflow:visible;
+}
+.slick-arrow:before{
+	color:var(--second-color);
+}
+.slick-dots li button:before{
+  color:var(--second-color);
+}
+.slick-slide{
+ opacity:0.3;
+ transition:opacity 0.3s ease-out;
+}
+.slick-slide.slick-active{
+ opacity:1;
+}
+/* CLIP PATH */
+.do-clip-curve{
+	clip-path: ellipse(100% 55% at 48% 44%);
+}
+.do-clip-play{
+	clip-path: polygon(100% 50%, 0 0, 0 100%);
+}
+
+/* BG FILTER, not too much !!! */
+.bdf{
+	backdrop-filter: blur(1px) opacity(0.5) contrast(200) saturate(0);
+}
+.bdf-blur{
+	backdrop-filter: blur(1rem);
+}
+.top-grad{
+	background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+.dark .top-grad{
+	background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+}
+
+.corner-blur{
+	background-color:#fff;
+}
+.dark .corner-blur{
+	background-color:#000;
+}
+
+.do-custom-width{
+
+	width: calc(100% + var(--xxxl-vw));
+  left: calc( max(2rem,var(--xxxl-vw)) * -1);
+
+}
+
+.do-fill-contraste-color{
+	
+  fill:var(--contraste-color);
+
+}
+
+.do-stroke-contraste-color *{
+	
+  stroke:var(--contraste-color);
+
+}
+
+.do-stroke-main-color *{
+	
+  stroke:var(--main-color);
+
+}
+
+
+
+.do-draw-svg * {
+	stroke-dasharray:500;
+	stroke-dashoffset:0;
+}
+
+.active .active\:do-draw-svg * {
+	animation-duration: 6s;
+  animation-name: dash;
+  animation-iteration-count: infinite;
+  animation-direction: forwards;
+}
+
+.hover:hover .hover\:do-draw-svg * {
+
+  animation-duration: 6s;
+  animation-name: dash;
+  animation-iteration-count: infinite;
+  animation-direction: forwards;
+
+
+}
+
+@keyframes dash {
+  from {
+    stroke-dasharray:400;
+	  stroke-dashoffset:0;
+  }
+  
+  25%  { 
+     stroke-dasharray:100;
+	   stroke-dashoffset:0;
+  }
+  
+  50%  { 
+     stroke-dasharray:-500;
+	   stroke-dashoffset:100;
+  }
+  
+  75%  { 
+     stroke-dasharray:100;
+	   stroke-dashoffset:0;
+  }
+
+  to {
+    stroke-dasharray:400;
+	  stroke-dashoffset:0;
+  }
+  
+  
+  
+}
+
+
+ [data-do-border='contraste']{
+ 	  border-color:var(--contraste-color) !important;
+ }
+
+/*</style>*/
