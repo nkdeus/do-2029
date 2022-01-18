@@ -645,6 +645,11 @@ window.WFmodules = {
         $scope.ease = $($scope).attr('data-do-ease-tween') || "sine.inOut";
         $scope.duration = $($scope).attr('data-do-duration-tween') || 0.4;
 
+        if($($scope).attr("data-do-target") != undefined){
+            $scope.target = $($scope.target,$scope);
+        }
+        
+
         $scope.getParams = function (motion,target,pOverwrite=true,pStagger=0.15) {
 
             let onParams = [];
