@@ -630,6 +630,168 @@ window.WFmodules = {
 
 
     },
+    dotweens: function () {
+
+        var $scope = this;
+        $scope.target = $($scope).attr("data-do-target") || $scope;
+        $scope.force = $($scope).attr('data-do-force') || 5;
+        $scope.scrub = Number($($scope).attr('data-do-scrub')) || true;
+        $scope.start = $($scope).attr('data-do-start') || "top center";
+        $scope.end = $($scope).attr('data-do-end') || "bottom center+=50%";
+        $scope.type = $($scope).attr('data-do-type-tween') || "to";
+        $scope.order = $($scope).attr('data-do-order-tween') || "top";
+        $scope.batch = $($scope).attr('data-do-batch-tween') == "true" || false;
+        $scope.motion = $($scope).attr('data-do-motion-tween') || "fade-in";
+        $scope.ease = $($scope).attr('data-do-ease-tween') || "sine.inOut";
+        $scope.duration = $($scope).attr('data-do-duration-tween') || 0.4;
+
+        $scope.getParams = function (motion,target,pOverwrite=true,pStagger=0.15) {
+
+            let onParams = [];
+            
+            let tempSetParams = {
+                overwrite: pOverwrite
+            };
+
+            let tempToParams = {
+                stagger: pStagger,
+                overwrite: pOverwrite,
+                duration:$scope.duration
+            };
+        
+            if (motion == "fade-in") {
+              
+                tempToParams['opacity'] = 1;
+                onParams["onEnter"] = tempToParams;
+
+                tempSetParams['opacity'] = 0;
+                onParams["onLeave"] = tempSetParams;
+
+                tempToParams['opacity'] = 1;
+                onParams["onEnterBack"] = tempToParams;
+
+                tempSetParams['opacity'] = 0;
+                onParams["onLeaveBack"] = tempSetParams;
+                
+                onParams["init"] = {opacity:0};
+            }
+
+            if (motion == "fade-out") {
+              
+                tempToParams['opacity'] = 0;
+                onParams["onEnter"] = tempToParams;
+
+                tempSetParams['opacity'] = 1;
+                onParams["onLeave"] = tempSetParams;
+
+                tempToParams['opacity'] = 0;
+                onParams["onEnterBack"] = tempToParams;
+
+                tempSetParams['opacity'] = 1;
+                onParams["onLeaveBack"] = tempSetParams;
+                
+                onParams["init"] = {opacity:1};
+            }
+
+            if (motion == "slide-in") {
+                
+
+                tempToParams['opacity'] = 1;
+                tempToParams['y'] = 0;
+                onParams["onEnter"] = tempToParams;
+
+                tempSetParams['opacity'] = 0;
+                tempSetParams['y'] = -100;
+                onParams["onLeave"] = tempSetParams;
+
+                tempToParams['opacity'] = 1;
+                tempToParams['y'] = 0;
+                onParams["onEnterBack"] = tempToParams;
+
+                tempSetParams['opacity'] = 0;
+                tempSetParams['y'] = 100;
+                onParams["onLeaveBack"] = tempSetParams;
+               
+                onParams["init"] = {opacity:0,y:100};
+             
+            }
+
+            if (motion == "zoom-in") {
+                
+
+                
+                tempToParams['scale'] = 1;
+                onParams["onEnter"] = tempToParams;
+
+                
+                tempSetParams['scale'] = 0;
+                onParams["onLeave"] = tempSetParams;
+
+                
+                tempToParams['scale'] = 1;
+                onParams["onEnterBack"] = tempToParams;
+
+                
+                tempSetParams['scale'] = 0;
+                onParams["onLeaveBack"] = tempSetParams;
+
+                onParams["init"] = {scale:0};
+               
+               
+            }
+
+            return onParams;
+        }
+
+      
+        if($scope.batch){
+
+            var params = $scope.getParams($scope.motion,$scope.target);
+            gsap.set($scope.target,params["init"]);
+           
+            ScrollTrigger.batch($scope.target, {
+                onEnter: batch => gsap.to(batch,  params["onEnter"]),
+                onLeave: batch => gsap.set(batch, params["onLeave"] ),
+                onEnterBack: batch => gsap.to(batch, params["onEnterBack"] ),
+                onLeaveBack: batch => gsap.set(batch, params["onLeaveBack"] )
+            });
+            ScrollTrigger.addEventListener("refreshInit", () => gsap.set($scope.target, params["init"]));
+            
+        }else{
+
+            var params = $scope.getParams($scope.motion,$scope.target,false,1.5);
+            gsap.set($scope.target,params["init"]);
+
+            var tl = gsap.timeline({scrollTrigger:{
+                trigger:$scope,
+                start: $scope.start,
+                end: $scope.end,
+                scrub: $scope.scrub,
+                toggleActions:"play resume play pause"
+            }});
+    
+            var np = params["onEnter"];
+            np["ease"] = "sine.inOut";
+            np["stagger"] = { // wrap advanced options in an object
+                amount: 1.5,
+                from: $scope.order,
+                ease: $scope.ease,
+                repeat: 0 // Repeats immediately, not waiting for the other staggered animations to finish
+              }
+    
+            tl.to($scope.target, np); 
+        }
+
+
+
+
+       
+
+    
+
+
+
+    },
     /* START DO-TRIGGER */
     dotrigger: function () {
 
