@@ -724,23 +724,19 @@ window.WFmodules = {
             if (motion == "goo-in") {
                 
 
-                tempToParams['y'] = 0;
-                tempToParams['scaleY'] = 1;
+                tempToParams['y'] = -100;
                 onParams["onEnter"] = tempToParams;
 
-                tempSetParams['y'] = -50;
-                tempToParams['scaleY'] = 0.7;
+                tempSetParams['y'] = 0;
                 onParams["onLeave"] = tempSetParams;
 
-                tempToParams['y'] = 0;
-                tempToParams['scaleY'] = 0;
+                tempToParams['y'] = -100;
                 onParams["onEnterBack"] = tempToParams;
 
-                tempSetParams['y'] = 50;
-                tempToParams['scaleY'] = 0.7;
+                tempSetParams['y'] = 0;
                 onParams["onLeaveBack"] = tempSetParams;
                
-                onParams["init"] = {scaleY:0.7,y:50};
+                onParams["init"] = {y:0};
              
             }
 
