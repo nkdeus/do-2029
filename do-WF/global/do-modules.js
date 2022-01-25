@@ -721,6 +721,25 @@ window.WFmodules = {
              
             }
 
+            if (motion == "goo-in") {
+                
+
+                tempToParams['y'] = 0;
+                onParams["onEnter"] = tempToParams;
+
+                tempSetParams['y'] = -100;
+                onParams["onLeave"] = tempSetParams;
+
+                tempToParams['y'] = 0;
+                onParams["onEnterBack"] = tempToParams;
+
+                tempSetParams['y'] = 100;
+                onParams["onLeaveBack"] = tempSetParams;
+               
+                onParams["init"] = {y:100};
+             
+            }
+
             if (motion == "zoom-in") {
                 
 
