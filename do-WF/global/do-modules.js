@@ -725,18 +725,22 @@ window.WFmodules = {
                 
 
                 tempToParams['y'] = 0;
+                tempToParams['scaleY'] = 1;
                 onParams["onEnter"] = tempToParams;
 
-                tempSetParams['y'] = -200;
+                tempSetParams['y'] = -50;
+                tempToParams['scaleY'] = 0.5;
                 onParams["onLeave"] = tempSetParams;
 
                 tempToParams['y'] = 0;
+                tempToParams['scaleY'] = 0;
                 onParams["onEnterBack"] = tempToParams;
 
-                tempSetParams['y'] = 200;
+                tempSetParams['y'] = 50;
+                tempToParams['scaleY'] = 0.5;
                 onParams["onLeaveBack"] = tempSetParams;
                
-                onParams["init"] = {y:200};
+                onParams["init"] = {scaleY:0.5,y:50};
              
             }
 
