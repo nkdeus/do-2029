@@ -633,7 +633,14 @@ window.WFmodules = {
     dotweens: function () {
 
         var $scope = this;
+        $scope.stage = $($scope).attr("data-do-stage") || false;
+
         $scope.target = $($scope).attr("data-do-target") || $scope;
+    
+        if($scope.stage != false){
+            console.log("new scope ",$scope.stage);
+            $scope.target = $($scope.target,$($scope.stage));
+        }
         $scope.force = $($scope).attr('data-do-force') || 5;
         $scope.scrub = Number($($scope).attr('data-do-scrub')) || true;
         $scope.start = $($scope).attr('data-do-start') || "top center";
@@ -718,25 +725,6 @@ window.WFmodules = {
                 onParams["onLeaveBack"] = tempSetParams;
                
                 onParams["init"] = {opacity:0,y:100};
-             
-            }
-
-            if (motion == "goo-in") {
-                
-
-                tempToParams['y'] = -100;
-                onParams["onEnter"] = tempToParams;
-
-                tempSetParams['y'] = 0;
-                onParams["onLeave"] = tempSetParams;
-
-                tempToParams['y'] = -100;
-                onParams["onEnterBack"] = tempToParams;
-
-                tempSetParams['y'] = 0;
-                onParams["onLeaveBack"] = tempSetParams;
-               
-                onParams["init"] = {y:0};
              
             }
 

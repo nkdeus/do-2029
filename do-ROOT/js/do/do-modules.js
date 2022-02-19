@@ -633,7 +633,14 @@ window.WFmodules = {
     dotweens: function () {
 
         var $scope = this;
+        $scope.stage = $($scope).attr("data-do-stage") || false;
+
         $scope.target = $($scope).attr("data-do-target") || $scope;
+    
+        if($scope.stage != false){
+            console.log("new scope ",$scope.stage);
+            $scope.target = $($scope.target,$($scope.stage));
+        }
         $scope.force = $($scope).attr('data-do-force') || 5;
         $scope.scrub = Number($($scope).attr('data-do-scrub')) || true;
         $scope.start = $($scope).attr('data-do-start') || "top center";
