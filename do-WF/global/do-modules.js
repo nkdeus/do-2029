@@ -636,10 +636,12 @@ window.WFmodules = {
         $scope.stage = $($scope).attr("data-do-stage") || false;
 
         $scope.target = $($scope).attr("data-do-target") || $scope;
+        $scope.triggerContainer = $scope;
     
         if($scope.stage != false){
             console.log("new scope ",$scope.stage);
             $scope.target = $($scope.target,$($scope.stage));
+            $scope.triggerContainer = $($scope.stage);
         }
         $scope.force = $($scope).attr('data-do-force') || 5;
         $scope.scrub = Number($($scope).attr('data-do-scrub')) || true;
@@ -775,7 +777,7 @@ window.WFmodules = {
             gsap.set($scope.target,params["init"]);
 
             var tl = gsap.timeline({scrollTrigger:{
-                trigger:$scope,
+                trigger:$scope.triggerContainer,
                 start: $scope.start,
                 end: $scope.end,
                 scrub: $scope.scrub,
