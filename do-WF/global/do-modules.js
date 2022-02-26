@@ -815,11 +815,39 @@ window.WFmodules = {
         $scope.classToggle = $($scope).attr("data-do-class") || "active"
         $scope.creatNav = $($scope).attr("data-do-scroll-nav") == "true";
         $scope.targetNav = $($scope).attr("data-do-target-nav");
+        $scope.targetNavOffsetY = $($scope).attr("data-do-target-nav-offset-y") ||90;
         $scope.btName = $($scope).attr("data-do-bt-name");
         $scope.start = $($scope).attr('data-do-start') || "top center";
         $scope.end = $($scope).attr('data-do-end') || "bottom center";
 
         $scope.isClone = false;
+
+                        
+        var initScrollNav = function() {
+
+            var menu = $($scope.targetNav);
+            var win = $(window);
+
+            $('a', menu) .click(function (event) {
+            event.preventDefault();
+            
+            var scope = $(this),
+            href = scope.attr("href"),
+            topY = $(href).offset().top - $scope.targetNavOffsetY;
+        
+        
+            TweenMax.to(win, 1, {
+                scrollTo: {
+                y: topY,
+                autoKill: true
+                },
+                ease: Power3.easeOut
+            });
+        
+            return false;
+            });
+        
+        }
 
         if($scope.creatNav){
            
@@ -837,6 +865,8 @@ window.WFmodules = {
             $("a", clone).attr("href","#"+idSection);
             $scope.targetClone = $("a", clone);
             $scope.isClone = true;
+
+            initScrollNav();
 
         }
 
@@ -866,6 +896,8 @@ window.WFmodules = {
             },
 
         });
+
+
 
         
 
