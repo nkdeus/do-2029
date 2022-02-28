@@ -123,7 +123,7 @@ window.WFmodules = {
            
             window.togglesKey[active].push(target);
         }
-        console.log('RESET  KEY ',window.togglesKey[active]);
+        //console.log('RESET  KEY ',window.togglesKey[active]);
 
         $scope.toggles = {};
 
@@ -139,10 +139,8 @@ window.WFmodules = {
                 if(value != target){
                     $(value).removeClass(classToggle);
                 }
-               
-
+            
             });
-
             //console.log("TOGGLE ")
             //console.log('TEST KEY ',window.togglesKey[$scope.toggleKey].bool);
             if ($scope.toggles[active] == undefined) {
@@ -150,7 +148,6 @@ window.WFmodules = {
             }
             window.togglesKey[$scope.toggleKey].bool = !window.togglesKey[$scope.toggleKey].bool;
             $scope.toggles[active] = window.togglesKey[$scope.toggleKey].bool;
-
             $($scope).toggleClass(active);
             if(window.togglesKey[active].length > 1){
                 target.toggleClass(classToggle);
@@ -161,15 +158,9 @@ window.WFmodules = {
                     target.addClass(classToggle);
                 }
             }
-    
-
             //console.log("TOGGLE ",classToggle,$scope.toggles[active]);
         }
-
-
         //
-
-
     },
     doautotheme: function () {
 
@@ -549,7 +540,17 @@ window.WFmodules = {
     dopara: function () {
 
         var $scope = this;
+
+        $scope.stage = $($scope).attr("data-do-stage") || false;
+
         $scope.target = $($scope).attr("data-do-target") || $scope;
+        $scope.triggerContainer = $($scope);
+
+        if($scope.stage != false){
+            $scope.target = $($scope.target,$($scope.stage));
+            $scope.triggerContainer = $($scope.stage);
+        }
+
         $scope.force = $($scope).attr('data-do-force') || 5;
         $scope.scrub = Number($($scope).attr('data-do-scrub')) || true;
         $scope.start = $($scope).attr('data-do-start') || "top top";
@@ -564,7 +565,7 @@ window.WFmodules = {
             let gsapParams = {
                 ease: 'none',
                 scrollTrigger: {
-                    trigger: $($scope),
+                    trigger: $scope.triggerContainer,
                     start: $scope.start,
                     end: $scope.end,
                     scrub: $scope.scrub
@@ -639,7 +640,6 @@ window.WFmodules = {
         $scope.triggerContainer = $scope;
     
         if($scope.stage != false){
-            console.log("new scope ",$scope.stage);
             $scope.target = $($scope.target,$($scope.stage));
             $scope.triggerContainer = $($scope.stage);
         }
@@ -653,13 +653,15 @@ window.WFmodules = {
         $scope.motion = $($scope).attr('data-do-motion-tween') || "fade-in";
         $scope.ease = $($scope).attr('data-do-ease-tween') || "sine.inOut";
         $scope.duration = $($scope).attr('data-do-duration-tween') || 0.4;
+        $scope.stagger = $($scope).attr('data-do-stagger-tween') || 0.15;
+        $scope.amount = $($scope).attr('data-do-amount-tween') || 1.5;
 
         if($($scope).attr("data-do-target") != undefined){
             $scope.target = $($scope.target,$scope);
         }
         
 
-        $scope.getParams = function (motion,target,pOverwrite=true,pStagger=0.15) {
+        $scope.getParams = function (motion,target,pOverwrite=true) {
 
             let onParams = [];
             
@@ -668,7 +670,7 @@ window.WFmodules = {
             };
 
             let tempToParams = {
-                stagger: pStagger,
+                stagger: $scope.stagger,
                 overwrite: pOverwrite,
                 duration:$scope.duration
             };
@@ -773,7 +775,7 @@ window.WFmodules = {
             
         }else{
 
-            var params = $scope.getParams($scope.motion,$scope.target,false,1.5);
+            var params = $scope.getParams($scope.motion,$scope.target,false);
             gsap.set($scope.target,params["init"]);
 
             var tl = gsap.timeline({scrollTrigger:{
@@ -787,7 +789,7 @@ window.WFmodules = {
             var np = params["onEnter"];
             np["ease"] = "sine.inOut";
             np["stagger"] = { // wrap advanced options in an object
-                amount: 1.5,
+                amount: $scope.amount,
                 from: $scope.order,
                 ease: $scope.ease,
                 repeat: 0 // Repeats immediately, not waiting for the other staggered animations to finish
@@ -795,14 +797,6 @@ window.WFmodules = {
     
             tl.to($scope.target, np); 
         }
-
-
-
-
-       
-
-    
-
 
 
     },
