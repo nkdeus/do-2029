@@ -70,11 +70,6 @@ window.WFmodules = {
 
         }
     },
-    dofaker: function () {
-
-        const $scope = this;
-
-    },
     dotoggle: function () {
         const $scope = this;
         const isGlobal = $($scope).attr('data-global') == "true";
