@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;400;700&display=swap" rel="stylesheet" />
   <link type="text/css" rel="stylesheet" href="css/style.css" />
+  <link type="text/css" rel="stylesheet" href="css/custom-css.css" />
 
   <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 
@@ -75,8 +76,8 @@
   <section class="do-bg-contraste-color do-px-smart-xxl do-py-smart-xxl por do-flex do-col do-flex-center" data-module="dotrigger">
 
     <div id="para-bg" class="poa do-full do-overflow-hidden top left do-z-0" data-module="dopara" data-do-target=".tween-para" data-do-scrub="0" data-do-type-tween="to" data-do-tween="y" data-do-force="-4">
-      <img class="tween-para do-w-10 do-h-13-vh por do-z-1 poa trigger-filter-invert" data-do-deph="1" style="object-fit: cover" src="imgs/bg.png" alt="layer-0" />
-      <img class="tween-para do-w-10 por do-z-1 poa trigger-filter-invert" data-do-deph="2" src="imgs/cloud.png" alt="layer-0" />
+      <img class="tween-para do-w-10 do-h-13-vh por do-z-1 poa trigger-filter-invert object-fit: cover" data-do-deph="1" src="imgs/fruits/fruit-3.jpg" alt="layer-0" />
+      <!--<img class="tween-para do-w-10 por do-z-1 poa trigger-filter-invert" data-do-deph="2" src="imgs/cloud.png" alt="layer-0" />-->
       <div class="poa top left do-bg-extra-color do-o-2 do-full do-z-1 tween-o tween-duration-10 deep-active:do-o-8"></div>
     </div>
 
@@ -90,9 +91,9 @@
     <div class="do-flex do-wrap do-gap-xs xl-do-gap-lg do-flex-center do-z-2 do-trans-y-5 tween-delay-8 tween-duration-10 tween-trans deep-active:do-trans-y-0 page-start:pof top">
       <div class="nav-module-menu">
         <div id="scroll-nav" class="con-nav-menu">
-          <ul class="con-menu">
+          <ul class="con-menu do-flex do-gap-md">
             <li class="con-item">
-              <a href="" class=""><span class="">clone link</span></a>
+              <a href="" class="do-p-sm do-bg-second-color"><span class="">clone link</span></a>
             </li>
           </ul>
         </div>
@@ -102,15 +103,48 @@
   </section>
 
   <div 
+  data-module="doscrolldatas"
+  data-do-target=".a"
+  data-do-start="top center+=50%"
+  data-do-end="bottom center-=50%"
+  data-do-calcul="full"
+  data-do-update="true"
+  >
+</div>
+
+
+  <section id="custom"
+           class="do-bg-second-color do-px-smart-xxl do-py-smart-xxl  por do-flex do-col do-flex-center"
+           data-module="dotrigger"
+           data-do-target-nav="#scroll-nav"
+           data-do-scroll-nav="true"
+           data-do-section-id="custom"
+           data-do-bt-name="Progress"
+           data-do-class="active"
+           data-do-trigger="true"
+  >
+
+    <div data-do-progress data-do-opacity class="a do-w-gold-xxl do-bg-extra-color custom-data ratio-16-9">
+        <div class="do-full content">
+
+        </div>
+    </div>
+
+
+  </section>
+
+  <div 
       data-module="dotweens"
       data-do-stage="#stage"
       data-do-target=".js-tween-item"
       data-do-batch-tween="true"
+      data-do-start="top center+=50%"
+      data-do-end="bottom center-=50%"
       data-do-motion-tween="slide-in">
   </div>
 
   <section id="stage"
-           class="do-bg-second-color do-px-smart-xxl do-py-smart-xxl do-gap-xxl por do-flex do-col do-flex-center"
+           class="do-bg-second-color do-px-smart-xxl do-py-smart-xxl do-gap-md md-do-gap-lg xl-do-gap-xxl por do-flex do-col do-flex-center"
            data-module="dotrigger"
            data-do-target-nav="#scroll-nav"
            data-do-scroll-nav="true"
@@ -121,68 +155,38 @@
   >
 
     <div class="do-flex do-wrap do-w-10 do-flex-center do-z-2 set-main:main">
-      <div class="do-w-gold-lg do-h-xxxl por">
-
-        <div class="do-full por do-z-3 js-tween-item">
-          <img class="do-w-10 do-h-10 por do-z-1 poa trigger-filter-invert do-object-fit:contain"  src="imgs/lune.png" />
-        </div>
-
-        <div class="do-full do-bg-extra-color poa top left do-z-2 js-tween-item">
-        </div>
-
-        <div class="do-full poa top-xs-rem left-xs-rem do-z-1 js-tween-item">
-          <div class="do-full do-bg-extra-color do-blur-1 do-o-3"></div>
+      <div class="do-w-10 md-do-w-5 lg-do-w-gold-xxl por ratio-16-9">
+        <div class="do-full por do-z-3 content do-overflow-hidden">
+          <img class="do-w-10 do-h-10 js-tween-item por do-z-1 poa trigger-filter-invert do-object-fit:cover"  src="imgs/fruits/fruit-4.jpg" />
         </div>
       </div>
-      <div class="do-w-gold-xl do-p-sm do-pt-0 por">
-     
-        <h2 class="do-txt-contraste-color reset-y">Lorem ipsum</h2>
-        <p class="do-txt-contraste-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem corrupti esse eos tenetur fugit similique minus assumenda, odit possimus sint in repellendus amet magnam expedita ea incidunt vero pariatur iusto!</p>
-       
+      <div class="do-w-10 md-do-w-5 lg-do-w-gold-xl do-p-sm por">
+        <h2 class="do-txt-contraste-color reset-y js-tween-item">Lorem ipsum</h2>
+        <p class="do-txt-contraste-color js-tween-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iusto!</p>
       </div> 
     </div>
 
     <div class="do-flex do-wrap do-w-10 do-flex-center do-z-2 set-main:main">
-      <div class="do-w-gold-lg do-h-xxxl por">
-
-        <div class="do-full por do-z-3 js-tween-item">
-          <img class="do-w-10 do-h-10 por do-z-1 poa trigger-filter-invert do-object-fit:contain"  src="imgs/lune.png" />
-        </div>
-
-        <div class="do-full do-bg-extra-color poa top left do-z-2 js-tween-item">
-        </div>
-
-        <div class="do-full poa top-xs-rem left-xs-rem do-z-1 js-tween-item">
-          <div class="do-full do-bg-extra-color do-blur-1 do-o-3"></div>
+      <div class="do-w-10 md-do-w-5 lg-do-w-gold-xxl por ratio-16-9">
+        <div class="do-full por do-z-3 content do-overflow-hidden">
+          <img class="do-w-10 do-h-10 js-tween-item por do-z-1 poa trigger-filter-invert do-object-fit:cover"  src="imgs/fruits/fruit-5.jpg" />
         </div>
       </div>
-      <div class="do-w-gold-xl do-p-sm por">
-     
-        <h2 class="do-txt-contraste-color reset-y">Lorem ipsum</h2>
-        <p class="do-txt-contraste-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem corrupti esse eos tenetur fugit similique minus assumenda, odit possimus sint in repellendus amet magnam expedita ea incidunt vero pariatur iusto!</p>
-       
+      <div class="do-w-10 md-do-w-5 lg-do-w-gold-xl do-p-sm por">
+        <h2 class="do-txt-contraste-color reset-y js-tween-item">Lorem ipsum</h2>
+        <p class="do-txt-contraste-color js-tween-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iusto!</p>
       </div> 
     </div>
 
     <div class="do-flex do-wrap do-w-10 do-flex-center do-z-2 set-main:main">
-      <div class="do-w-gold-lg do-h-xxxl por">
-
-        <div class="do-full por do-z-3 js-tween-item">
-          <img class="do-w-10 do-h-10 por do-z-1 poa trigger-filter-invert do-object-fit:contain"  src="imgs/lune.png" />
-        </div>
-
-        <div class="do-full do-bg-extra-color poa top left do-z-2 js-tween-item">
-        </div>
-
-        <div class="do-full poa top-xs-rem left-xs-rem do-z-1 js-tween-item">
-          <div class="do-full do-bg-extra-color do-blur-1 do-o-3"></div>
+      <div class="do-w-10 md-do-w-5 lg-do-w-gold-xxl por ratio-16-9">
+        <div class="do-full por do-z-3 content do-overflow-hidden">
+          <img class="do-w-10 do-h-10 js-tween-item por do-z-1 poa trigger-filter-invert do-object-fit:cover"  src="imgs/fruits/fruit-6.jpg" />
         </div>
       </div>
-      <div class="do-w-gold-xl do-p-sm por">
-     
-        <h2 class="do-txt-contraste-color reset-y">Lorem ipsum</h2>
-        <p class="do-txt-contraste-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem corrupti esse eos tenetur fugit similique minus assumenda, odit possimus sint in repellendus amet magnam expedita ea incidunt vero pariatur iusto!</p>
-       
+      <div class="do-w-10 md-do-w-5 lg-do-w-gold-xl do-p-sm por">
+        <h2 class="do-txt-contraste-color reset-y js-tween-item">Lorem ipsum</h2>
+        <p class="do-txt-contraste-color js-tween-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iusto!</p>
       </div> 
     </div>
 
@@ -198,7 +202,7 @@
         data-do-scrub="0"
         data-do-order-tween="random"
         data-do-batch-tween="false"
-        data-do-motion-tween="fade-out">
+        data-do-motion-tween="slide-out">
 
     <div class="do-grid do-auto-xxs do-grid-full do-grid-dense do-wrap do-full do-flex-center do-z-2 all:do-bg-extra-color odd:do-bg-extra5-color">
       <div class="do-full js-tween-item2"></div>

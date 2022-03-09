@@ -4,7 +4,7 @@ window.doautotheme = null;
 $(document).ready(function() {
 
     $('[data-module]').each((i, el) => {
-        console.log('#module', el.dataset.module);
+        
 
         if (el.dataset.module == 'dotheme') {
           if (window.dothemes == null) {
@@ -14,7 +14,14 @@ $(document).ready(function() {
             window.WFmodules[el.dataset.module].call(el)
           );
         } else {
-          window.WFmodules[el.dataset.module].call(el);
+          if(window.WFmodules[el.dataset.module] != undefined){
+
+            console.log('#module', el.dataset.module);
+             window.WFmodules[el.dataset.module].call(el);
+          }else{
+            console.log('#ERROR', el.dataset.module);
+          }
+         
         }
     });
 

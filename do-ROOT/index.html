@@ -14,7 +14,11 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 
+
+
   <script type="text/javascript" src="js/do/do-modules.js"></script>
+
+  <script type="text/javascript" src="js/do/modules/do-module-tags.js"></script>
   
   <script type="text/javascript" src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
 
@@ -24,7 +28,7 @@
 
   <script type="text/javascript" src="js/do/do-scrollEvents.js"></script>
 
-
+  <script type="text/javascript" src="js/index.js"></script>
   
   <!-- 
 
@@ -88,7 +92,7 @@
     </div>
   </section>
 
-  <div data-module="dotweens" data-do-stage="#stage" data-do-target=".js-tween-item" data-do-scrub="0" data-do-batch-tween="true" data-do-motion-tween="slide-in">
+  <div data-module="dotweens" data-do-stage="#stage" data-do-target=".js-tween-item" data-do-scrub="3" data-do-batch-tween="true" data-do-motion-tween="fade-in">
   </div>
 
   <section id="stage" class="do-bg-extra-color do-px-smart-xxl do-py-smart-xxl por do-flex do-col do-flex-center">
@@ -116,109 +120,52 @@
     </div>
   </section>
 
-  <section class="do-bg-extra5-color do-w-10 full h-auto por do-flex do-col do-flex-center"
-  data-module="dotweens" data-do-target=".js-tween-item3" data-do-scrub="0.5" data-do-start="bottom bottom" data-do-end="top top" data-do-duration-tween="0.2" data-do-order-tween="edges" data-do-batch-tween="false" data-do-motion-tween="fade-out">
+  <div data-module="dofilters" data-do-stage="#items-container" data-do-target=".js-tween-item3" data-do-nav="#nav-filters" data-do-type="multi" data-do-class-toggle="active:do-hide">
+  </div>
 
-    <div class="do-grid do-auto-xxs do-grid-dense do-h-5-vh do-grid-full do-wrap do-w-10 do-flex-center do-full bg-extra-color all:do-bg-second-color">
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-      <div class="do-full js-tween-item3"></div>
-
+  <section class="do-bg-second-2-n-color do-w-10 full h-auto por do-flex do-col do-flex-center"
+  data-module="dotweens" data-do-target=".js-tween-item3" data-do-scrub="0.5" data-do-start="top bottom" data-do-end="bottom center+=20%" data-do-duration-tween="0.2" data-do-order-tween="top" data-do-batch-tween="false" data-do-motion-tween="fade-in">
+    <nav id="nav-filters"  class="d-flex do-gap-xs do-my-sm por do-z-1">
+      <a href="/main" class="do-bt do-p-xs do-o-5 active:do-o-10 active:do-bg-main-color active:do-txt-second-color">main</a>
+      <a href="/second" class="do-bt do-p-xs do-o-5 active:do-o-10 active:do-bg-second-color active:do-txt-contraste-color">second</a>
+      <a href="/contraste" class="do-bt do-p-xs do-o-5 active:do-o-10 active:do-bg-contraste-color active:do-txt-second-color">contraste</a>
+      <a href="/extra" class="do-bt do-p-xs do-o-5 active:do-o-10 active:do-bg-extra-color active:do-txt-second-color">extra</a>  
+      <input id="rechercheArea" type="text" name="class" placeholder="class" class="reset-input do-bg-second-color do-p-xs do-border do-bw-sm-rem do-border-main-color do-border-solid">
+     
+    </nav>
    
+    <div class="do-full poa top left do-bg-contraste-color do-o-1 do-z-0"></div>
+    <div id="items-container" class="do-grid do-auto-sm do-grid-dense do-h-10-vh do-gap-xxxs do-grid-full do-wrap do-w-10 do-flex-center do-full por do-z-1">
+      <div href="main/extra" class="do-bg-main-color do-full js-tween-item3">
+        <div class="do-h-10 do-w-5 do-o-5 do-bg-extra-color"></div>
+      </div>
+      <div href="second" class="do-bg-second-color do-full js-tween-item3"></div>
+      <div href="main" class="do-bg-main-color do-full js-tween-item3"></div>
+      <div href="second" class="do-bg-second-color do-full js-tween-item3"></div>
+      <div href="contraste/second/extra" class="do-bg-contraste-color do-full js-tween-item3">
+        <div class="do-h-5 do-w-5 do-o-5 do-bg-second-color"></div>
+        <div class="do-h-5 do-w-5 do-o-5 do-bg-extra-color"></div>
+      </div>
+      <div href="second" class="do-bg-second-color do-full js-tween-item3"></div>
+      <div href="main" class="do-bg-main-color do-full js-tween-item3"></div>
+      <div href="second/contraste/main/extra" class="do-bg-second-color do-full js-tween-item3">
+        <div class="do-h-3 do-w-5 do-o-5 do-bg-contraste-color"></div>
+        <div class="do-h-3 do-w-5 do-o-5 do-bg-main-color"></div>
+        <div class="do-h-3 do-w-5 do-o-5 do-bg-extra-color"></div>
+      </div>
+      <div href="second" class="do-bg-second-color do-full js-tween-item3"></div>
+      <div href="extra" class="do-bg-extra-color do-full js-tween-item3"></div>
+      <div href="second" class="do-bg-second-color do-full js-tween-item3"></div>
+      <div href="main" class="do-bg-main-color do-full js-tween-item3"></div>
+  
+
     </div>
   </section>
 
   <footer class="por">
 
     <div class="do-full poa top left do-z-2"
-  data-module="dotweens" data-do-target=".js-tween-item2" data-do-scrub="0" data-do-order-tween="random" data-do-batch-tween="false" data-do-motion-tween="fade-out">
+  data-module="dotweens" data-do-target=".js-tween-item2" data-do-scrub="0" data-do-order-tween="random" data-do-end="top top+=20%" data-do-batch-tween="false" data-do-motion-tween="fade-out">
 
     <div class="do-grid do-auto-xxs do-grid-full do-grid-dense do-wrap do-full do-flex-center do-z-2 all:do-bg-extra-color odd:do-bg-extra5-color">
       <div class="do-full js-tween-item2"></div>

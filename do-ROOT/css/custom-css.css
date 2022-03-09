@@ -1,0 +1,29 @@
+.custom-data::after{
+
+    content:"data-do";
+    display: block;
+    color:white;
+    font-size:5rem;
+    text-align:center;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate3d(-50%,-50%,0);
+    z-index: 10;
+
+}
+
+[data-do-progress]::after {
+    content: attr(data-do-progress);
+}
+
+#custom{
+    perspective: 800px;
+}
+[data-do-opacity] {
+ 
+    opacity: min( 1, calc(var(--progress)*2));
+    --p: calc(var(--progress) * 2);
+    transform: translateY( calc( calc( 1 - var(--p) ) * -10% ) ) rotateX( calc( calc( 1 - var(--p) ) * -10deg )) rotateY( calc( calc( 1 - var(--p) ) * 10deg )) rotateZ( calc( calc( 1 - var(--p) ) * -3deg ));
+
+}
