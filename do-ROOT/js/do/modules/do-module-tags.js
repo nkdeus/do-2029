@@ -12,6 +12,7 @@ moduleManager["dofilters"] = function () {
     //data-do-stage="#items-container" data-do-target=".js-tween-item3" data-do-nav="#nav-filters" data-do-type="solo" data-do-class-toggle="active"
     $scope.stage = $($($scope).attr("data-do-stage") || "#items-container");
     $scope.target = $($scope).attr("data-do-target");
+    $scope.subTarget = $($scope).attr("data-do-sub-target");
     $scope.nav = $($scope).attr("data-do-nav") || "#nav-filters";
     $scope.type = $($scope).attr("data-do-type") || "solo"; // solo || multi
     $scope.toggleClass = $($scope).attr("data-do-class-toggle") || "active:do-hide";
@@ -52,13 +53,19 @@ moduleManager["dofilters"] = function () {
 
     $.each($($scope.target,$scope.stage), function (key, value) {         
         var instance = $(value);
+        
         instance.addClass($scope.defaultClass);
-        instance.addClass($scope.toggleClass);                    
+        instance.addClass($scope.toggleClass);     
+        var tagsToSplit = instance.attr("href");
+        if($scope.subTarget != undefined){
+            tagsToSplit = instance.find($scope.subTarget).attr("href");
+        }
+        
         var item = 
         {
             id:key,
             instance:instance,
-            tags:instance.attr("href").split($scope.sep)
+            tags:tagsToSplit.split($scope.sep)
         }
         datas.push(item);
         $.each(item.tags, function (key, value) {
