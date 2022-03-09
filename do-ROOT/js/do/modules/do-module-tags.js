@@ -60,16 +60,24 @@ moduleManager["dofilters"] = function () {
         if($scope.subTarget != undefined){
             tagsToSplit = instance.find($scope.subTarget).attr("href");
         }
-        
+        var tempsTags = tagsToSplit.split($scope.sep);
+        tempsTags = $.grep(tempsTags,function(n){ return n != '' || n });
+
+        console.log("tempsTags ",tempsTags);
+  
         var item = 
         {
             id:key,
             instance:instance,
-            tags:tagsToSplit.split($scope.sep)
+            tags:tempsTags
         }
         datas.push(item);
         $.each(item.tags, function (key, value) {
-            tags[value].push(item);
+           
+            if(tags[value]){
+                tags[value].push(item);
+            }
+           
         });
     });
 
