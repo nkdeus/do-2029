@@ -19,6 +19,8 @@ moduleManager["dofilters"] = function () {
     $scope.defaultClass = $($scope).attr("data-do-class-default") || "do-block";
     $scope.customData = $($scope).attr("data-do-custom-data") || "data-do-tag";
     $scope.inputArea = $($scope).attr("data-do-target-input") || "rechercheArea";
+    $scope.sep = $($scope).attr("data-do-sep") || "/";
+    $scope.tagIndex = parseInt($($scope).attr("data-do-tag-index")) || 1;
 
     var datas = [];
     var tags = {};
@@ -36,7 +38,7 @@ moduleManager["dofilters"] = function () {
     $($scope.nav).find('a').each(function() {  
         var bt = $(this);
         bts.push(bt);
-        var tag = bt.attr("href").split("/")[1];
+        var tag = bt.attr("href").split($scope.sep)[$scope.tagIndex];
         bt.attr($scope.customData,tag);
         autoCompleteList.push(tag);
         console.log("push ",tag);
@@ -56,7 +58,7 @@ moduleManager["dofilters"] = function () {
         {
             id:key,
             instance:instance,
-            tags:instance.attr("href").split("/")
+            tags:instance.attr("href").split($scope.sep)
         }
         datas.push(item);
         $.each(item.tags, function (key, value) {
