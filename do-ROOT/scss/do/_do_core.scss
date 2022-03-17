@@ -64,7 +64,7 @@ Core de la créature
     $map: ();
     $count: decimal-round(strip-unit($count) * $do, 3, 'round');
     $value: $count;
-    @debug(--#{$key},$value);
+    //@debug(--#{$key},$value);
     $map: map.merge(
         $map,
         (
@@ -261,6 +261,31 @@ Core de la créature
                 #{$direction}: math.div($value,2) * 1rem;
             }
         }
+    }
+}
+
+@mixin do-get-data($var-name,$size-do,$size) {
+
+    @each $data-class, $var-name in $do-custom-data {
+
+        $class-full-name : get-#{$var-name}\:#{$data-class}-#{$size-do};
+  
+        .#{$class-full-name}{
+            //@debug($class-full-name);
+            @if $data-class == "trans-y" {
+                $tempDelta : $size*10%;
+                //@debug($tempDelta);
+                transform: translateY(calc(var(--#{$var-name})* #{$tempDelta}));
+                &-n{
+                    $tempDelta : $size*-10%;
+                    transform: translateY(calc(var(--#{$var-name})* #{$tempDelta})); 
+                }
+            }
+            @if $data-class == "opacity" {
+                opacity: calc(var(--#{$var-name})* 1);
+            }
+        }
+
     }
 }
 
@@ -724,6 +749,8 @@ Core de la créature
     }
 
     @include do-full-dir($key, '.', $value);
+    //@debug($key,$value);
+    @include do-get-data('progress',$key,$value);
 
     @each $class-name, $props in $do-clamp {
         @include do-fluide-class(
@@ -760,6 +787,7 @@ Core de la créature
 @include do-display('do');
 @include do-tweens-type('tween');
 @include do-util('do');
+//@include do-get-data('progress');
 // Création des choses responsive
 
 @each $break-class, $break-point in $do-screen {
@@ -775,6 +803,7 @@ Core de la créature
         @include do-colors('#{$break-class}-', true);
         @include do-display('#{$break-class}-do');
         @include do-util('#{$break-class}-do');
+
 
         @each $key, $value in $do-matrix {
             @each $list in $do-gogogo {
@@ -801,7 +830,7 @@ Core de la créature
 @each $fs, $value in $do-fs {
     #{$fs} {
         $tempSize: map.get($do-matrix, $value);
-        // @debug($fs,$tempSize);
+        
         font-size: $tempSize * 1rem;
         $tempSize2: $tempSize * 1rem;
         $tempSize3: math.div($tempSize * 1rem, $do);

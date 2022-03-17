@@ -2,14 +2,14 @@
 
 
 module.exports = {
-    content: ['do-ROOT/index.html','do-ROOT/**/*.php'],
-    css: ['do-ROOT/css/style.css'],
+    content: ['index.html','js/index.js'],
+    css: ['css/style.css'],
     keyframe: true,
-    output: 'do-ROOT/css/style-purge.css',
+    output: 'css/style-purge.css',
     rejected: true,
     variables:true,
     safelist: {
-      standard: [/^do-bg-/,/^video/,/^ifram/,/^slick/,/^do-auto-/,/^do-trans-/,/^html/],
+      standard: [/^do-event-/],
       deep: [],
       greedy: [],
       keyframes: [],
@@ -18,3 +18,5 @@ module.exports = {
     defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
    
   }
+
+  /// standard: [/^do-bg-/,/^video/,/^ifram/,/^slick/,/^do-auto-/,/^do-trans-/,/^html/],

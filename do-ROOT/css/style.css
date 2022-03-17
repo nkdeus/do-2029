@@ -387,23 +387,63 @@ Core de la créature
   bottom: 0.17rem;
 }
 
+.get-progress\:trans-y-xxxs {
+  transform: translateY(calc(var(--progress)* 3.4%));
+}
+
+.get-progress\:trans-y-xxxs-n {
+  transform: translateY(calc(var(--progress)* -3.4%));
+}
+
+.get-progress\:opacity-xxxs {
+  opacity: calc(var(--progress) * 1);
+}
+
 .do-px-fluid-xxxs {
-  padding-left: clamp( 0.2101315562rem, 0.272vw, 0.34rem );
-  padding-right: clamp( 0.2101315562rem, 0.272vw, 0.34rem );
+  padding-left: clamp(
+                0.2101315562rem,
+                0.272vw,
+                0.34rem
+            );
+  padding-right: clamp(
+                0.2101315562rem,
+                0.272vw,
+                0.34rem
+            );
 }
 
 .do-py-fluid-xxxs {
-  padding-top: clamp( 0.2101315562rem, 0.272vw, 0.34rem );
-  padding-bottom: clamp( 0.2101315562rem, 0.272vw, 0.34rem );
+  padding-top: clamp(
+                0.2101315562rem,
+                0.272vw,
+                0.34rem
+            );
+  padding-bottom: clamp(
+                0.2101315562rem,
+                0.272vw,
+                0.34rem
+            );
 }
 
 .do-my-fluid-xxxs {
-  margin-top: clamp( 0.2101315562rem, 0.272vw, 0.34rem );
-  margin-bottom: clamp( 0.2101315562rem, 0.272vw, 0.34rem );
+  margin-top: clamp(
+                0.2101315562rem,
+                0.272vw,
+                0.34rem
+            );
+  margin-bottom: clamp(
+                0.2101315562rem,
+                0.272vw,
+                0.34rem
+            );
 }
 
 .do-fs-fluid-xxxs {
-  font-size: clamp( 0.2101315562rem, 0.272vw, 0.34rem );
+  font-size: clamp(
+                0.2101315562rem,
+                0.272vw,
+                0.34rem
+            );
 }
 
 .do-px-smart-xxxs {
@@ -991,23 +1031,63 @@ Core de la créature
   bottom: 0.275rem;
 }
 
+.get-progress\:trans-y-xxs {
+  transform: translateY(calc(var(--progress)* 5.5%));
+}
+
+.get-progress\:trans-y-xxs-n {
+  transform: translateY(calc(var(--progress)* -5.5%));
+}
+
+.get-progress\:opacity-xxs {
+  opacity: calc(var(--progress) * 1);
+}
+
 .do-px-fluid-xxs {
-  padding-left: clamp( 0.3399186938rem, 0.44vw, 0.55rem );
-  padding-right: clamp( 0.3399186938rem, 0.44vw, 0.55rem );
+  padding-left: clamp(
+                0.3399186938rem,
+                0.44vw,
+                0.55rem
+            );
+  padding-right: clamp(
+                0.3399186938rem,
+                0.44vw,
+                0.55rem
+            );
 }
 
 .do-py-fluid-xxs {
-  padding-top: clamp( 0.3399186938rem, 0.44vw, 0.55rem );
-  padding-bottom: clamp( 0.3399186938rem, 0.44vw, 0.55rem );
+  padding-top: clamp(
+                0.3399186938rem,
+                0.44vw,
+                0.55rem
+            );
+  padding-bottom: clamp(
+                0.3399186938rem,
+                0.44vw,
+                0.55rem
+            );
 }
 
 .do-my-fluid-xxs {
-  margin-top: clamp( 0.3399186938rem, 0.44vw, 0.55rem );
-  margin-bottom: clamp( 0.3399186938rem, 0.44vw, 0.55rem );
+  margin-top: clamp(
+                0.3399186938rem,
+                0.44vw,
+                0.55rem
+            );
+  margin-bottom: clamp(
+                0.3399186938rem,
+                0.44vw,
+                0.55rem
+            );
 }
 
 .do-fs-fluid-xxs {
-  font-size: clamp( 0.3399186938rem, 0.44vw, 0.55rem );
+  font-size: clamp(
+                0.3399186938rem,
+                0.44vw,
+                0.55rem
+            );
 }
 
 .do-px-smart-xxs {
@@ -1598,23 +1678,63 @@ Core de la créature
   bottom: 0.445rem;
 }
 
+.get-progress\:trans-y-xs {
+  transform: translateY(calc(var(--progress)* 8.9%));
+}
+
+.get-progress\:trans-y-xs-n {
+  transform: translateY(calc(var(--progress)* -8.9%));
+}
+
+.get-progress\:opacity-xs {
+  opacity: calc(var(--progress) * 1);
+}
+
 .do-px-fluid-xs {
-  padding-left: clamp( 0.55005025rem, 0.712vw, 0.89rem );
-  padding-right: clamp( 0.55005025rem, 0.712vw, 0.89rem );
+  padding-left: clamp(
+                0.55005025rem,
+                0.712vw,
+                0.89rem
+            );
+  padding-right: clamp(
+                0.55005025rem,
+                0.712vw,
+                0.89rem
+            );
 }
 
 .do-py-fluid-xs {
-  padding-top: clamp( 0.55005025rem, 0.712vw, 0.89rem );
-  padding-bottom: clamp( 0.55005025rem, 0.712vw, 0.89rem );
+  padding-top: clamp(
+                0.55005025rem,
+                0.712vw,
+                0.89rem
+            );
+  padding-bottom: clamp(
+                0.55005025rem,
+                0.712vw,
+                0.89rem
+            );
 }
 
 .do-my-fluid-xs {
-  margin-top: clamp( 0.55005025rem, 0.712vw, 0.89rem );
-  margin-bottom: clamp( 0.55005025rem, 0.712vw, 0.89rem );
+  margin-top: clamp(
+                0.55005025rem,
+                0.712vw,
+                0.89rem
+            );
+  margin-bottom: clamp(
+                0.55005025rem,
+                0.712vw,
+                0.89rem
+            );
 }
 
 .do-fs-fluid-xs {
-  font-size: clamp( 0.55005025rem, 0.712vw, 0.89rem );
+  font-size: clamp(
+                0.55005025rem,
+                0.712vw,
+                0.89rem
+            );
 }
 
 .do-px-smart-xs {
@@ -2204,23 +2324,63 @@ Core de la créature
   bottom: 0.72rem;
 }
 
+.get-progress\:trans-y-sm {
+  transform: translateY(calc(var(--progress)* 14.4%));
+}
+
+.get-progress\:trans-y-sm-n {
+  transform: translateY(calc(var(--progress)* -14.4%));
+}
+
+.get-progress\:opacity-sm {
+  opacity: calc(var(--progress) * 1);
+}
+
 .do-px-fluid-sm {
-  padding-left: clamp( 0.8899689438rem, 1.152vw, 1.44rem );
-  padding-right: clamp( 0.8899689438rem, 1.152vw, 1.44rem );
+  padding-left: clamp(
+                0.8899689438rem,
+                1.152vw,
+                1.44rem
+            );
+  padding-right: clamp(
+                0.8899689438rem,
+                1.152vw,
+                1.44rem
+            );
 }
 
 .do-py-fluid-sm {
-  padding-top: clamp( 0.8899689438rem, 1.152vw, 1.44rem );
-  padding-bottom: clamp( 0.8899689438rem, 1.152vw, 1.44rem );
+  padding-top: clamp(
+                0.8899689438rem,
+                1.152vw,
+                1.44rem
+            );
+  padding-bottom: clamp(
+                0.8899689438rem,
+                1.152vw,
+                1.44rem
+            );
 }
 
 .do-my-fluid-sm {
-  margin-top: clamp( 0.8899689438rem, 1.152vw, 1.44rem );
-  margin-bottom: clamp( 0.8899689438rem, 1.152vw, 1.44rem );
+  margin-top: clamp(
+                0.8899689438rem,
+                1.152vw,
+                1.44rem
+            );
+  margin-bottom: clamp(
+                0.8899689438rem,
+                1.152vw,
+                1.44rem
+            );
 }
 
 .do-fs-fluid-sm {
-  font-size: clamp( 0.8899689438rem, 1.152vw, 1.44rem );
+  font-size: clamp(
+                0.8899689438rem,
+                1.152vw,
+                1.44rem
+            );
 }
 
 .do-px-smart-sm {
@@ -2808,23 +2968,63 @@ Core de la créature
   bottom: 1.165rem;
 }
 
+.get-progress\:trans-y-md {
+  transform: translateY(calc(var(--progress)* 23.3%));
+}
+
+.get-progress\:trans-y-md-n {
+  transform: translateY(calc(var(--progress)* -23.3%));
+}
+
+.get-progress\:opacity-md {
+  opacity: calc(var(--progress) * 1);
+}
+
 .do-px-fluid-md {
-  padding-left: clamp( 1.4400191938rem, 1.864vw, 2.33rem );
-  padding-right: clamp( 1.4400191938rem, 1.864vw, 2.33rem );
+  padding-left: clamp(
+                1.4400191938rem,
+                1.864vw,
+                2.33rem
+            );
+  padding-right: clamp(
+                1.4400191938rem,
+                1.864vw,
+                2.33rem
+            );
 }
 
 .do-py-fluid-md {
-  padding-top: clamp( 1.4400191938rem, 1.864vw, 2.33rem );
-  padding-bottom: clamp( 1.4400191938rem, 1.864vw, 2.33rem );
+  padding-top: clamp(
+                1.4400191938rem,
+                1.864vw,
+                2.33rem
+            );
+  padding-bottom: clamp(
+                1.4400191938rem,
+                1.864vw,
+                2.33rem
+            );
 }
 
 .do-my-fluid-md {
-  margin-top: clamp( 1.4400191938rem, 1.864vw, 2.33rem );
-  margin-bottom: clamp( 1.4400191938rem, 1.864vw, 2.33rem );
+  margin-top: clamp(
+                1.4400191938rem,
+                1.864vw,
+                2.33rem
+            );
+  margin-bottom: clamp(
+                1.4400191938rem,
+                1.864vw,
+                2.33rem
+            );
 }
 
 .do-fs-fluid-md {
-  font-size: clamp( 1.4400191938rem, 1.864vw, 2.33rem );
+  font-size: clamp(
+                1.4400191938rem,
+                1.864vw,
+                2.33rem
+            );
 }
 
 .do-px-smart-md {
@@ -3412,23 +3612,63 @@ Core de la créature
   bottom: 1.885rem;
 }
 
+.get-progress\:trans-y-lg {
+  transform: translateY(calc(var(--progress)* 37.7%));
+}
+
+.get-progress\:trans-y-lg-n {
+  transform: translateY(calc(var(--progress)* -37.7%));
+}
+
+.get-progress\:opacity-lg {
+  opacity: calc(var(--progress) * 1);
+}
+
 .do-px-fluid-lg {
-  padding-left: clamp( 2.3299881376rem, 3.016vw, 3.77rem );
-  padding-right: clamp( 2.3299881376rem, 3.016vw, 3.77rem );
+  padding-left: clamp(
+                2.3299881376rem,
+                3.016vw,
+                3.77rem
+            );
+  padding-right: clamp(
+                2.3299881376rem,
+                3.016vw,
+                3.77rem
+            );
 }
 
 .do-py-fluid-lg {
-  padding-top: clamp( 2.3299881376rem, 3.016vw, 3.77rem );
-  padding-bottom: clamp( 2.3299881376rem, 3.016vw, 3.77rem );
+  padding-top: clamp(
+                2.3299881376rem,
+                3.016vw,
+                3.77rem
+            );
+  padding-bottom: clamp(
+                2.3299881376rem,
+                3.016vw,
+                3.77rem
+            );
 }
 
 .do-my-fluid-lg {
-  margin-top: clamp( 2.3299881376rem, 3.016vw, 3.77rem );
-  margin-bottom: clamp( 2.3299881376rem, 3.016vw, 3.77rem );
+  margin-top: clamp(
+                2.3299881376rem,
+                3.016vw,
+                3.77rem
+            );
+  margin-bottom: clamp(
+                2.3299881376rem,
+                3.016vw,
+                3.77rem
+            );
 }
 
 .do-fs-fluid-lg {
-  font-size: clamp( 2.3299881376rem, 3.016vw, 3.77rem );
+  font-size: clamp(
+                2.3299881376rem,
+                3.016vw,
+                3.77rem
+            );
 }
 
 .do-px-smart-lg {
@@ -4016,23 +4256,63 @@ Core de la créature
   bottom: 3.05rem;
 }
 
+.get-progress\:trans-y-xl {
+  transform: translateY(calc(var(--progress)* 61%));
+}
+
+.get-progress\:trans-y-xl-n {
+  transform: translateY(calc(var(--progress)* -61%));
+}
+
+.get-progress\:opacity-xl {
+  opacity: calc(var(--progress) * 1);
+}
+
 .do-px-fluid-xl {
-  padding-left: clamp( 3.7700073314rem, 4.88vw, 6.1rem );
-  padding-right: clamp( 3.7700073314rem, 4.88vw, 6.1rem );
+  padding-left: clamp(
+                3.7700073314rem,
+                4.88vw,
+                6.1rem
+            );
+  padding-right: clamp(
+                3.7700073314rem,
+                4.88vw,
+                6.1rem
+            );
 }
 
 .do-py-fluid-xl {
-  padding-top: clamp( 3.7700073314rem, 4.88vw, 6.1rem );
-  padding-bottom: clamp( 3.7700073314rem, 4.88vw, 6.1rem );
+  padding-top: clamp(
+                3.7700073314rem,
+                4.88vw,
+                6.1rem
+            );
+  padding-bottom: clamp(
+                3.7700073314rem,
+                4.88vw,
+                6.1rem
+            );
 }
 
 .do-my-fluid-xl {
-  margin-top: clamp( 3.7700073314rem, 4.88vw, 6.1rem );
-  margin-bottom: clamp( 3.7700073314rem, 4.88vw, 6.1rem );
+  margin-top: clamp(
+                3.7700073314rem,
+                4.88vw,
+                6.1rem
+            );
+  margin-bottom: clamp(
+                3.7700073314rem,
+                4.88vw,
+                6.1rem
+            );
 }
 
 .do-fs-fluid-xl {
-  font-size: clamp( 3.7700073314rem, 4.88vw, 6.1rem );
+  font-size: clamp(
+                3.7700073314rem,
+                4.88vw,
+                6.1rem
+            );
 }
 
 .do-px-smart-xl {
@@ -4620,23 +4900,63 @@ Core de la créature
   bottom: 4.935rem;
 }
 
+.get-progress\:trans-y-xxl {
+  transform: translateY(calc(var(--progress)* 98.7%));
+}
+
+.get-progress\:trans-y-xxl-n {
+  transform: translateY(calc(var(--progress)* -98.7%));
+}
+
+.get-progress\:opacity-xxl {
+  opacity: calc(var(--progress) * 1);
+}
+
 .do-px-fluid-xxl {
-  padding-left: clamp( 6.099995469rem, 7.896vw, 9.87rem );
-  padding-right: clamp( 6.099995469rem, 7.896vw, 9.87rem );
+  padding-left: clamp(
+                6.099995469rem,
+                7.896vw,
+                9.87rem
+            );
+  padding-right: clamp(
+                6.099995469rem,
+                7.896vw,
+                9.87rem
+            );
 }
 
 .do-py-fluid-xxl {
-  padding-top: clamp( 6.099995469rem, 7.896vw, 9.87rem );
-  padding-bottom: clamp( 6.099995469rem, 7.896vw, 9.87rem );
+  padding-top: clamp(
+                6.099995469rem,
+                7.896vw,
+                9.87rem
+            );
+  padding-bottom: clamp(
+                6.099995469rem,
+                7.896vw,
+                9.87rem
+            );
 }
 
 .do-my-fluid-xxl {
-  margin-top: clamp( 6.099995469rem, 7.896vw, 9.87rem );
-  margin-bottom: clamp( 6.099995469rem, 7.896vw, 9.87rem );
+  margin-top: clamp(
+                6.099995469rem,
+                7.896vw,
+                9.87rem
+            );
+  margin-bottom: clamp(
+                6.099995469rem,
+                7.896vw,
+                9.87rem
+            );
 }
 
 .do-fs-fluid-xxl {
-  font-size: clamp( 6.099995469rem, 7.896vw, 9.87rem );
+  font-size: clamp(
+                6.099995469rem,
+                7.896vw,
+                9.87rem
+            );
 }
 
 .do-px-smart-xxl,
@@ -5232,23 +5552,63 @@ section {
   bottom: 7.985rem;
 }
 
+.get-progress\:trans-y-xxxl {
+  transform: translateY(calc(var(--progress)* 159.7%));
+}
+
+.get-progress\:trans-y-xxxl-n {
+  transform: translateY(calc(var(--progress)* -159.7%));
+}
+
+.get-progress\:opacity-xxxl {
+  opacity: calc(var(--progress) * 1);
+}
+
 .do-px-fluid-xxxl {
-  padding-left: clamp( 9.8700028003rem, 12.776vw, 15.97rem );
-  padding-right: clamp( 9.8700028003rem, 12.776vw, 15.97rem );
+  padding-left: clamp(
+                9.8700028003rem,
+                12.776vw,
+                15.97rem
+            );
+  padding-right: clamp(
+                9.8700028003rem,
+                12.776vw,
+                15.97rem
+            );
 }
 
 .do-py-fluid-xxxl {
-  padding-top: clamp( 9.8700028003rem, 12.776vw, 15.97rem );
-  padding-bottom: clamp( 9.8700028003rem, 12.776vw, 15.97rem );
+  padding-top: clamp(
+                9.8700028003rem,
+                12.776vw,
+                15.97rem
+            );
+  padding-bottom: clamp(
+                9.8700028003rem,
+                12.776vw,
+                15.97rem
+            );
 }
 
 .do-my-fluid-xxxl {
-  margin-top: clamp( 9.8700028003rem, 12.776vw, 15.97rem );
-  margin-bottom: clamp( 9.8700028003rem, 12.776vw, 15.97rem );
+  margin-top: clamp(
+                9.8700028003rem,
+                12.776vw,
+                15.97rem
+            );
+  margin-bottom: clamp(
+                9.8700028003rem,
+                12.776vw,
+                15.97rem
+            );
 }
 
 .do-fs-fluid-xxxl {
-  font-size: clamp( 9.8700028003rem, 12.776vw, 15.97rem );
+  font-size: clamp(
+                9.8700028003rem,
+                12.776vw,
+                15.97rem
+            );
 }
 
 .do-px-smart-xxxl {
@@ -61451,11 +61811,6 @@ section {
     text-shadow: 0px 16rem 16rem rgba(0, 0, 0, 0.1);
   }
 
-  :root {
-    --main: #2E3454;
-    --main-color: var(--main);
-  }
-
   .xs-do-bg-main-color {
     background-color: var(--main-color) !important;
   }
@@ -61754,11 +62109,6 @@ section {
 
   .odd\:xs-do-border-main-color > *:nth-child(odd) {
     border-color: var(--main-color) !important;
-  }
-
-  :root {
-    --second: #ffffff;
-    --second-color: var(--second);
   }
 
   .xs-do-bg-second-color {
@@ -62061,11 +62411,6 @@ section {
     border-color: var(--second-color) !important;
   }
 
-  :root {
-    --contraste: #131319;
-    --contraste-color: var(--contraste);
-  }
-
   .xs-do-bg-contraste-color {
     background-color: var(--contraste-color) !important;
   }
@@ -62366,11 +62711,6 @@ section {
     border-color: var(--contraste-color) !important;
   }
 
-  :root {
-    --extra: #FA372E;
-    --extra-color: var(--extra);
-  }
-
   .xs-do-bg-extra-color {
     background-color: var(--extra-color) !important;
   }
@@ -62669,11 +63009,6 @@ section {
 
   .odd\:xs-do-border-extra-color > *:nth-child(odd) {
     border-color: var(--extra-color) !important;
-  }
-
-  :root {
-    --fade: #D2D4EA;
-    --fade-color: var(--fade);
   }
 
   .xs-do-bg-fade-color {
@@ -73204,11 +73539,6 @@ section {
     text-shadow: 0px 16rem 16rem rgba(0, 0, 0, 0.1);
   }
 
-  :root {
-    --main: #2E3454;
-    --main-color: var(--main);
-  }
-
   .sm-do-bg-main-color {
     background-color: var(--main-color) !important;
   }
@@ -73507,11 +73837,6 @@ section {
 
   .odd\:sm-do-border-main-color > *:nth-child(odd) {
     border-color: var(--main-color) !important;
-  }
-
-  :root {
-    --second: #ffffff;
-    --second-color: var(--second);
   }
 
   .sm-do-bg-second-color {
@@ -73814,11 +74139,6 @@ section {
     border-color: var(--second-color) !important;
   }
 
-  :root {
-    --contraste: #131319;
-    --contraste-color: var(--contraste);
-  }
-
   .sm-do-bg-contraste-color {
     background-color: var(--contraste-color) !important;
   }
@@ -74119,11 +74439,6 @@ section {
     border-color: var(--contraste-color) !important;
   }
 
-  :root {
-    --extra: #FA372E;
-    --extra-color: var(--extra);
-  }
-
   .sm-do-bg-extra-color {
     background-color: var(--extra-color) !important;
   }
@@ -74422,11 +74737,6 @@ section {
 
   .odd\:sm-do-border-extra-color > *:nth-child(odd) {
     border-color: var(--extra-color) !important;
-  }
-
-  :root {
-    --fade: #D2D4EA;
-    --fade-color: var(--fade);
   }
 
   .sm-do-bg-fade-color {
@@ -84957,11 +85267,6 @@ section {
     text-shadow: 0px 16rem 16rem rgba(0, 0, 0, 0.1);
   }
 
-  :root {
-    --main: #2E3454;
-    --main-color: var(--main);
-  }
-
   .md-do-bg-main-color {
     background-color: var(--main-color) !important;
   }
@@ -85260,11 +85565,6 @@ section {
 
   .odd\:md-do-border-main-color > *:nth-child(odd) {
     border-color: var(--main-color) !important;
-  }
-
-  :root {
-    --second: #ffffff;
-    --second-color: var(--second);
   }
 
   .md-do-bg-second-color {
@@ -85567,11 +85867,6 @@ section {
     border-color: var(--second-color) !important;
   }
 
-  :root {
-    --contraste: #131319;
-    --contraste-color: var(--contraste);
-  }
-
   .md-do-bg-contraste-color {
     background-color: var(--contraste-color) !important;
   }
@@ -85872,11 +86167,6 @@ section {
     border-color: var(--contraste-color) !important;
   }
 
-  :root {
-    --extra: #FA372E;
-    --extra-color: var(--extra);
-  }
-
   .md-do-bg-extra-color {
     background-color: var(--extra-color) !important;
   }
@@ -86175,11 +86465,6 @@ section {
 
   .odd\:md-do-border-extra-color > *:nth-child(odd) {
     border-color: var(--extra-color) !important;
-  }
-
-  :root {
-    --fade: #D2D4EA;
-    --fade-color: var(--fade);
   }
 
   .md-do-bg-fade-color {
@@ -96710,11 +96995,6 @@ section {
     text-shadow: 0px 16rem 16rem rgba(0, 0, 0, 0.1);
   }
 
-  :root {
-    --main: #2E3454;
-    --main-color: var(--main);
-  }
-
   .lg-do-bg-main-color {
     background-color: var(--main-color) !important;
   }
@@ -97013,11 +97293,6 @@ section {
 
   .odd\:lg-do-border-main-color > *:nth-child(odd) {
     border-color: var(--main-color) !important;
-  }
-
-  :root {
-    --second: #ffffff;
-    --second-color: var(--second);
   }
 
   .lg-do-bg-second-color {
@@ -97320,11 +97595,6 @@ section {
     border-color: var(--second-color) !important;
   }
 
-  :root {
-    --contraste: #131319;
-    --contraste-color: var(--contraste);
-  }
-
   .lg-do-bg-contraste-color {
     background-color: var(--contraste-color) !important;
   }
@@ -97625,11 +97895,6 @@ section {
     border-color: var(--contraste-color) !important;
   }
 
-  :root {
-    --extra: #FA372E;
-    --extra-color: var(--extra);
-  }
-
   .lg-do-bg-extra-color {
     background-color: var(--extra-color) !important;
   }
@@ -97928,11 +98193,6 @@ section {
 
   .odd\:lg-do-border-extra-color > *:nth-child(odd) {
     border-color: var(--extra-color) !important;
-  }
-
-  :root {
-    --fade: #D2D4EA;
-    --fade-color: var(--fade);
   }
 
   .lg-do-bg-fade-color {
@@ -108463,11 +108723,6 @@ section {
     text-shadow: 0px 16rem 16rem rgba(0, 0, 0, 0.1);
   }
 
-  :root {
-    --main: #2E3454;
-    --main-color: var(--main);
-  }
-
   .xl-do-bg-main-color {
     background-color: var(--main-color) !important;
   }
@@ -108766,11 +109021,6 @@ section {
 
   .odd\:xl-do-border-main-color > *:nth-child(odd) {
     border-color: var(--main-color) !important;
-  }
-
-  :root {
-    --second: #ffffff;
-    --second-color: var(--second);
   }
 
   .xl-do-bg-second-color {
@@ -109073,11 +109323,6 @@ section {
     border-color: var(--second-color) !important;
   }
 
-  :root {
-    --contraste: #131319;
-    --contraste-color: var(--contraste);
-  }
-
   .xl-do-bg-contraste-color {
     background-color: var(--contraste-color) !important;
   }
@@ -109378,11 +109623,6 @@ section {
     border-color: var(--contraste-color) !important;
   }
 
-  :root {
-    --extra: #FA372E;
-    --extra-color: var(--extra);
-  }
-
   .xl-do-bg-extra-color {
     background-color: var(--extra-color) !important;
   }
@@ -109681,11 +109921,6 @@ section {
 
   .odd\:xl-do-border-extra-color > *:nth-child(odd) {
     border-color: var(--extra-color) !important;
-  }
-
-  :root {
-    --fade: #D2D4EA;
-    --fade-color: var(--fade);
   }
 
   .xl-do-bg-fade-color {
@@ -120216,11 +120451,6 @@ section {
     text-shadow: 0px 16rem 16rem rgba(0, 0, 0, 0.1);
   }
 
-  :root {
-    --main: #2E3454;
-    --main-color: var(--main);
-  }
-
   .xxl-do-bg-main-color {
     background-color: var(--main-color) !important;
   }
@@ -120519,11 +120749,6 @@ section {
 
   .odd\:xxl-do-border-main-color > *:nth-child(odd) {
     border-color: var(--main-color) !important;
-  }
-
-  :root {
-    --second: #ffffff;
-    --second-color: var(--second);
   }
 
   .xxl-do-bg-second-color {
@@ -120826,11 +121051,6 @@ section {
     border-color: var(--second-color) !important;
   }
 
-  :root {
-    --contraste: #131319;
-    --contraste-color: var(--contraste);
-  }
-
   .xxl-do-bg-contraste-color {
     background-color: var(--contraste-color) !important;
   }
@@ -121131,11 +121351,6 @@ section {
     border-color: var(--contraste-color) !important;
   }
 
-  :root {
-    --extra: #FA372E;
-    --extra-color: var(--extra);
-  }
-
   .xxl-do-bg-extra-color {
     background-color: var(--extra-color) !important;
   }
@@ -121434,11 +121649,6 @@ section {
 
   .odd\:xxl-do-border-extra-color > *:nth-child(odd) {
     border-color: var(--extra-color) !important;
-  }
-
-  :root {
-    --fade: #D2D4EA;
-    --fade-color: var(--fade);
   }
 
   .xxl-do-bg-fade-color {
@@ -131969,11 +132179,6 @@ section {
     text-shadow: 0px 16rem 16rem rgba(0, 0, 0, 0.1);
   }
 
-  :root {
-    --main: #2E3454;
-    --main-color: var(--main);
-  }
-
   .xxxl-do-bg-main-color {
     background-color: var(--main-color) !important;
   }
@@ -132272,11 +132477,6 @@ section {
 
   .odd\:xxxl-do-border-main-color > *:nth-child(odd) {
     border-color: var(--main-color) !important;
-  }
-
-  :root {
-    --second: #ffffff;
-    --second-color: var(--second);
   }
 
   .xxxl-do-bg-second-color {
@@ -132579,11 +132779,6 @@ section {
     border-color: var(--second-color) !important;
   }
 
-  :root {
-    --contraste: #131319;
-    --contraste-color: var(--contraste);
-  }
-
   .xxxl-do-bg-contraste-color {
     background-color: var(--contraste-color) !important;
   }
@@ -132884,11 +133079,6 @@ section {
     border-color: var(--contraste-color) !important;
   }
 
-  :root {
-    --extra: #FA372E;
-    --extra-color: var(--extra);
-  }
-
   .xxxl-do-bg-extra-color {
     background-color: var(--extra-color) !important;
   }
@@ -133187,11 +133377,6 @@ section {
 
   .odd\:xxxl-do-border-extra-color > *:nth-child(odd) {
     border-color: var(--extra-color) !important;
-  }
-
-  :root {
-    --fade: #D2D4EA;
-    --fade-color: var(--fade);
   }
 
   .xxxl-do-bg-fade-color {
@@ -137127,30 +137312,20 @@ input.no-focus:focus {
 
 html {
   line-height: 1.15;
-  /* 1 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */
   font-size: 16px;
+  font-size: clamp(10px, 1vw, 20px);
 }
 
-@media screen and (min-width: 992px) {
-  html {
-    font-size: clamp(14px, 1vw, 20px);
-  }
-}
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+  color: var(--contraste-color);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   margin: 0;
 }
 
-@media screen and (min-width: 992px) {
-  body {
-    font-size: clamp(14px, 1vw, 20px);
-  }
-}
 h1,
 h2,
 h3,
@@ -138085,6 +138260,11 @@ Tweens système
 }
 
 /* purgecss start ignore */
+#hello {
+  content: "welcome :)";
+}
+
+/* purgecss end ignore */
 body {
   background-color: var(--second-color);
   margin: 0;
@@ -138637,7 +138817,7 @@ section.full-y {
 
 .block {
   position: relative;
-  margin-top: calc( var(--md) * 1rem );
+  margin-top: calc(var(--md) * 1rem);
 }
 
 .block strong {
@@ -138651,8 +138831,8 @@ section.full-y {
   top: 50%;
   z-index: -1;
   display: block;
-  width: calc(100% + ( var(--md) * 1rem ));
-  height: calc(100% + ( var(--md) * 1rem ));
+  width: calc(100% + var(--md) * 1rem);
+  height: calc(100% + var(--md) * 1rem);
   transform: translateX(-50%) translateY(-50%);
   background-color: var(--contraste1-color);
 }
@@ -138671,13 +138851,11 @@ section.full-y {
 }
 
 .page-series .do-grid {
-  margin-bottom: calc( var(--md) * 1rem );
+  margin-bottom: calc(var(--md) * 1rem);
 }
 
 .page-series .do-grid .block {
   margin-bottom: 0px;
 }
-
-/* purgecss end ignore */
 
 /*# sourceMappingURL=style.css.map */

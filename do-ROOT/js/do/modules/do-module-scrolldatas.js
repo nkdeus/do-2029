@@ -11,9 +11,12 @@ moduleManager["doscrolldatas"] = function () {
     var $scope = this;
     $scope.target = $($scope).attr("data-do-target") || $scope;
     $scope.calcul = $($scope).attr("data-do-calcul") || "yoyo";
+    $scope.force = Number($($scope).attr("data-do-force")) || 1;
     $scope.update = $($scope).attr("data-do-update") == "true" || false;
     $scope.toggle = $($scope).attr("data-do-toggle") == "true" || false;
     $scope.classik = $($scope).attr("data-do-classik") == "true" || false;
+    $scope.start = $($scope).attr("data-do-start") || "top center+=10%";
+    $scope.end = $($scope).attr("data-do-end") || "bottom center+=10%";
 
     var calculType = {};   
     calculType["yoyo"] = function(pValue){
@@ -22,20 +25,20 @@ moduleManager["doscrolldatas"] = function () {
         if(pValue >= 0.5){
             result = 1-pValue;
         }
-        return Number(result*2).toFixed(4);
+        return Number(result*2*$scope.force).toFixed(4);
 
     }
 
     calculType["full"] = function(pValue){
 
-        return pValue;
+        return pValue*$scope.force;
 
     }
 
     ScrollTrigger.create({
         trigger: $scope.target,
-        start: "top center+=10%",
-        end: "bottom center-=10%",
+        start: $scope.start,
+        end: $scope.end,
         markers:true,
         onEnter: self => {
             if($scope.classik){

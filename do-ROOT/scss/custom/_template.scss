@@ -8,6 +8,11 @@
 
 // TPL global
 /* purgecss start ignore */
+#hello{
+	content:"welcome :)";
+}
+/* purgecss end ignore */
+
 body{
 	background-color: var(--second-color);
 	margin:0;
@@ -746,4 +751,3 @@ section{
 }
 
 
-/* purgecss end ignore */

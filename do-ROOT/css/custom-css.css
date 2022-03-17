@@ -1,6 +1,7 @@
 .custom-data::after{
 
     content:"data-do";
+    content: attr(data-do-progress);
     display: block;
     color:white;
     font-size:5rem;
@@ -13,7 +14,7 @@
 
 }
 
-[data-do-progress]::after {
+[data-do-_progress]::after {
     content: attr(data-do-progress);
 }
 
@@ -26,4 +27,51 @@
     --p: calc(var(--progress) * 2);
     transform: translateY( calc( calc( 1 - var(--p) ) * -10% ) ) rotateX( calc( calc( 1 - var(--p) ) * -10deg )) rotateY( calc( calc( 1 - var(--p) ) * 10deg )) rotateZ( calc( calc( 1 - var(--p) ) * -3deg ));
 
+}
+
+.set-force-sm{
+    --force:var(--sm);
+    --progress: calc(var(--force) * var(--progress));
+}
+.set-force-md{
+    --force:var(--md);
+    --progress: calc(var(--force) * var(--progress));
+}
+
+[data-do-draw] *{
+    position: relative;
+}
+
+[data-do-draw] .line{
+   opacity: 0.5;
+}
+
+[data-do-draw] [do-draw-x] > .line{
+    width: calc(var(--progress) * 100vw);
+    position: absolute;
+    height: 1px;
+    background-color: var(--contraste-color);
+    left: 50%;
+    bottom: 0%;
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+[data-do-draw] [do-draw-x] > .line:nth-child(2){
+    bottom: calc(100% - 1px);
+}
+
+[data-do-draw] [do-draw-y] > .line{
+    height: calc(var(--progress) * 100vh);
+    position: absolute;
+    width: 1px;
+    background-color: var(--contraste-color);
+    left: 0%;
+    top: 50%;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+[data-do-draw] [do-draw-y] > .line:nth-child(2){
+    left: calc(100% - 1px);
 }

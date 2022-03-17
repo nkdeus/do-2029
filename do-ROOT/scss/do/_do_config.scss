@@ -131,9 +131,15 @@ $temp-class: ".do";
 $count: $do-u;
 $do-directions: "left", "right", "top", "bottom";
 $do-aligns: "start", "center", "end", "flex-start","flex-end", "stretch", "space-between", "space-around";
+$do-custom-data: "background-color", "right", "top", "bottom";
 $do-base : 10; 
 $do-max : 16; 
 
+$do-custom-data : (
+  "bg-color" : "progress",
+  "trans-y"  : "progress",
+  "opacity"  : "progress"
+);
 
 $do-sizes : (
   "xxxs"  : 0px,
